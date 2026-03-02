@@ -1,5 +1,5 @@
 <template>
   <div>
-    <h1>咨询记录</h1>
+    <h1>情感分析</h1>
   </div>
 </template>

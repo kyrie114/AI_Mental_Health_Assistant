@@ -11,8 +11,8 @@
                     </div>
                 </div>
             </div>
-            <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose">
-                <el-menu-item v-for="item in router.options.routes[0].children" :key="item.path" :index="item.path">
+            <el-menu default-active="2" class="el-menu-vertical-demo" >
+                <el-menu-item  @click="selectMenu" v-for="item in router.options.routes[0].children" :key="item.path" :index="item.path">
                     <el-icon>
                         <component :is="item.meta.icon" />
                     </el-icon>
@@ -25,19 +25,15 @@
 
 <script setup>
 import { useRouter } from 'vue-router';
-
 const router = useRouter();
-
 const iconUrl = new URL('@/assets/images/机器人.png', import.meta.url).href
 
-
-const handleOpen = () => {
-
+const selectMenu = (key) => {
+   console.log(key);
+   const activeIndex = router.options.routes[0]
+   router.push(`${activeIndex.path}/${key.index}`);
 }
 
-const handleClose = () => {
-
-}
 </script>
 
 <style scoped>
