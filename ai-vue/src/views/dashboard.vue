@@ -1,5 +1,5 @@
 <template>
     <div>
-        <h1>Dashboard</h1>
-    </div>
+        <h1>仪表盘</h1>
+    </div>  
 </template>
