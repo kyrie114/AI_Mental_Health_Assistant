@@ -42,8 +42,6 @@ const handleCommand = (command) => {
 }
 
 import { useAdminStore } from '@/stores/admin'
-
-
 const handleCollapse = () => {
     useAdminStore().toggleCollapse()
 }

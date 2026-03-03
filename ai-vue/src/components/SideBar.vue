@@ -9,7 +9,7 @@
             <el-menu 
             :collapse-transition="false"
             :collapse="isCollapse" 
-            default-active="2" 
+            default-active="activeMenu" 
             class="el-menu-vertical-demo">
                 <div class="brand">
                     <!-- Logo 图标 -->
@@ -47,9 +47,6 @@ const selectMenu = (key) => {
     const activeIndex = router.options.routes[0]
     router.push(`${activeIndex.path}/${key.index}`);
 }
-
-
-
 
 </script>
 
