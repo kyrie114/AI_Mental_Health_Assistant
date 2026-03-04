@@ -25,7 +25,7 @@ const formItem = [
 },
 ]
     
-const handleSearch = (form) => {
-    console.log(form);
+const handleSearch = (formData) => {
+    console.log(formData);
 }
 </script>
