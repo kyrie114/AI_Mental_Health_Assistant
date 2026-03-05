@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import BackLayout from '@/components/BackLayout.vue'//@需要定义路由组件的路径在vite.config.js中配置alias别名
-
+import AuthLayout from '@/components/AuthLayout.vue'
 // 路由配置（嵌套路由）
 const backEedRouter = [
   {
@@ -42,6 +42,26 @@ const backEedRouter = [
           icon: 'User'
         }
       }
+    ]
+  },
+  {
+    path: '/auth',
+    component: AuthLayout,
+    children: [
+      {
+        path: 'login',
+        component: () => import('@/views/login.vue'),
+        meta: {
+          title: '登录',
+        },
+      },
+      {
+        path: 'register',
+        component: () => import('@/views/register.vue'),
+        meta: {
+          title: '注册',
+        },
+      },
     ]
   }
 ]
